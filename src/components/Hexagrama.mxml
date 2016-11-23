@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			[Bindable] public var arrLineas:Array;
+			[Bindable] public var objLineas:Object = {'yang' : '=========', 'yin' : '===   ===', 'yang-viejo' : '====0====', 'yin-viejo' : '=== x ==='};
+		]]>
+	</fx:Script>
+	<s:Label text="{objLineas[arrLineas[0]]}"/>
+	<s:Label text="{objLineas[arrLineas[1]]}"/>
+	<s:Label text="{objLineas[arrLineas[2]]}"/>
+	<s:Label text="{objLineas[arrLineas[3]]}"/>
+	<s:Label text="{objLineas[arrLineas[4]]}"/>
+	<s:Label text="{objLineas[arrLineas[5]]}"/>
+</s:VGroup>

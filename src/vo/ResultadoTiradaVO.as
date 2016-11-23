@@ -2,16 +2,16 @@ package vo
 {
 	public class ResultadoTiradaVO
 	{
-		public var arrPrincipal:Array;
-		public var arrTendencial:Array;
-		public var arrCausal:Array;
-		public var arrEfecto:Array;
-		public var arrPreEfecto:Array;
-		public var arrPostEfecto:Array;
-		public var arrCausa:Array;
-		public var arrPreCausa:Array;
-		public var arrPostCausa:Array;
-		public var arrRegente:Array;
+		public var arrPrincipal:Array = [];
+		public var arrTendencial:Array = [];
+		public var arrCausal:Array = [];
+		public var arrEfecto:Array = [];
+		public var arrPreEfecto:Array = [];
+		public var arrPostEfecto:Array = [];
+		public var arrCausa:Array = [];
+		public var arrPreCausa:Array = [];
+		public var arrPostCausa:Array = [];
+		public var arrRegente:Array = [];
 		public var Principal:String;
 		public var Tendencial:String;
 		public var Causal:String;
