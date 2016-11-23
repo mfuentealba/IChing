@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		xmlns:s="library://ns.adobe.com/flex/spark" title="ResultadoView">
+		xmlns:s="library://ns.adobe.com/flex/spark" title="ResultadoView" xmlns:components="components.*">
+	<fx:Script>
+		<![CDATA[
+			import model.ModelApp;
+			[Bindable] private var modelApp:ModelApp = ModelApp.getInstance();
+		]]>
+	</fx:Script>
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
+	<s:layout>
+		<s:VerticalLayout horizontalAlign="center" paddingTop="10"/>
+	</s:layout>
+	<components:Hexagrama id="hexPrincipal" arrLineas="{modelApp.resultadoTiradaVO.arrPrincipal}" strHex="{modelApp.resultadoTiradaVO.Principal}"/>
 </s:View>

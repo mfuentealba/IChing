@@ -59,15 +59,19 @@
 			protected function btnResult_clickHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
+				
 				modelApp.resultadoTiradaVO = new ResultadoTiradaVO();
+				modelApp.resultadoTiradaVO.Principal = '';
 				for(var i:int = 0; i < 6; i++){
 					modelApp.resultadoTiradaVO.arrPrincipal.push(Lineas(vgLineas.getElementAt(5 - i)).lin.linea);
+					modelApp.resultadoTiradaVO.Principal += modelApp.objTransfHex[Lineas(vgLineas.getElementAt(5 - i)).lin.linea];
 					modelApp.resultadoTiradaVO.arrTendencial.push(Lineas(vgLineas.getElementAt(5 - i)).lin.resultado == '6' ? '7' : (Lineas(vgLineas.getElementAt(5 - i)).lin.resultado == '9' ? '8' : Lineas(vgLineas.getElementAt(5 - i)).lin.resultado));
 					modelApp.resultadoTiradaVO.arrCausal.push(Lineas(vgLineas.getElementAt(5 - i)).lin.resultado == '8' ? '7' : (Lineas(vgLineas.getElementAt(5 - i)).lin.resultado == '7' ? '8' : Lineas(vgLineas.getElementAt(5 - i)).lin.resultado));
 					
 					
 				}
-				 
+				
+				this.navigator.pushView(ResultadoView); 
 			}
 			
 		]]>

@@ -1,5 +1,6 @@
 package vo
 {
+	[Bindable]
 	public class ResultadoTiradaVO
 	{
 		public var arrPrincipal:Array = [];
