@@ -1,5 +1,8 @@
 package model
 {
+	import flash.data.SQLConnection;
+	import flash.filesystem.File;
+	
 	import vo.ResultadoTiradaVO;
 
 	[Bindable]
@@ -71,14 +74,14 @@ package model
 									'112211' : 60,
 									'221122' : 61,
 									'121212' : 62,
-									'212121' : 63,
-									'111111' : 64
+									'212121' : 63
 								};
 		
 		
 		
 		public var resultadoTiradaVO:ResultadoTiradaVO;
-		
+		public var dbFile:File;
+		public var sqlConnection:SQLConnection;
 		private static var modelLocator:ModelApp;
 		
 		
