@@ -8,7 +8,9 @@ package listeners
 	
 	import mx.rpc.events.ResultEvent;
 	
-	public class DBListener implements IBaseListener
+	import servicios.DelegadoSQLite;
+	
+	public class DBListener  
 	{
 		private static var evento:DBEvent;		
 		private static var modelApp:ModelApp = ModelApp.getInstance();
@@ -19,7 +21,7 @@ package listeners
 			switch(evento.type){
 				case DBEvent.CONECTAR:
 					//rmtObjClientes.getAllClientes();
-					
+					modelApp.delegadoSQL = DelegadoSQLite.getInstance();
 					break;
 			}
 			

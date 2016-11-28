@@ -3,7 +3,11 @@
 								  xmlns:s="library://ns.adobe.com/flex/spark" applicationDPI="160" creationComplete="ini(event)">
 	<fx:Script>
 		<![CDATA[
+			import controller.Controller;
+			
 			import events.DBEvent;
+			
+			import model.ModelApp;
 			
 			import mx.events.FlexEvent;
 			
@@ -11,6 +15,7 @@
 			{
 				// TODO Auto-generated method stub
 				var dbEvent:DBEvent = new DBEvent(DBEvent.CONECTAR);
+				Controller.getInstance().dispatchEvent(dbEvent);
 			}
 			
 		]]>

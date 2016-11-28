@@ -99,7 +99,9 @@ package servicios
 			stmt.text = "CREATE TABLE IF NOT EXISTS tbl_Hexagramas (numero INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, dictamen TEXT, imagen TEXT, comentario TEXT, linea1 TEXT, linea2 TEXT, linea3 TEXT, linea4 TEXT, linea5 TEXT, linea6 TEXT)";
 			stmt.execute();
 			
-			stmt.text = "SELECT 0 cant";
+			stmt.text = "SELECT 0 cant";			
+			stmt.execute();
+			stmt.text = "INSERT INTO tbl_Hexagramas values (null, 'El Cielo', '', '', '', '', '', '', '', '', '')";
 			
 			stmt.execute();
 			trace(stmt.getResult());

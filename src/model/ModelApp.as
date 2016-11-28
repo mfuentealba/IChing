@@ -3,6 +3,10 @@ package model
 	import flash.data.SQLConnection;
 	import flash.filesystem.File;
 	
+	import mx.collections.ArrayCollection;
+	
+	import servicios.DelegadoSQLite;
+	
 	import vo.ResultadoTiradaVO;
 
 	[Bindable]
@@ -78,7 +82,8 @@ package model
 								};
 		
 		
-		
+		public var arrHex:ArrayCollection = new ArrayCollection();
+		public var delegadoSQL:DelegadoSQLite;
 		public var resultadoTiradaVO:ResultadoTiradaVO;
 		public var dbFile:File;
 		public var sqlConnection:SQLConnection;

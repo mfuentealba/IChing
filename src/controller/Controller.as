@@ -8,6 +8,8 @@ package controller
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
 	
+	import listeners.DBListener;
+	
 	import model.ModelApp;
 	
 	
@@ -41,7 +43,7 @@ package controller
 		}
 		
 		public function inic():void{
-			//addEventListenerNew(DBEvent.CONECTAR, SucursalListener);
+			addEventListenerNew(DBEvent.CONECTAR, DBListener);
 		}	
 		
 	}
